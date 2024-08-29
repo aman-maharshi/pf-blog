@@ -6,8 +6,8 @@ const Home = () => {
   return (
     <section className="py-4">
       <div className="container">
-        <div className='flex items-center justify-between'>
-          <h1 className="text-3xl font-bold">Home</h1>
+        <div className='flex items-center justify-between mt-4'>
+          <h1 className="text-2xl font-bold">Home</h1>
 
           <ThemeToggle />
         </div>

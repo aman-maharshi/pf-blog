@@ -3,9 +3,10 @@
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button'
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
 
 const ThemeToggle = () => {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false) // wont be running this on server as we dont have access to theme there
   const { setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
@@ -20,7 +21,11 @@ const ThemeToggle = () => {
       variant={'ghost'}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} 
     >
-      Toggle Theme
+      {resolvedTheme === 'dark' ? (
+        <SunIcon className='size-4 text-white' />
+      ) : (
+        <MoonIcon className='size-4 text-zinc-900' />
+      )}
     </Button>
   )
 }
