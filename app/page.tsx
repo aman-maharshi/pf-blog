@@ -1,16 +1,11 @@
-import ThemeToggle from '@/components/themeToggle'
-import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const Home = () => {
   return (
-    <section className="py-4">
-      <div className="container">
-        <div className='flex items-center justify-between mt-4'>
-          <h1 className="text-2xl font-bold">Home</h1>
-
-          <ThemeToggle />
-        </div>
+    <section className="py-24">
+      <div className="container max-w-[1200px]">
+        <h1 className="text-2xl font-bold">Home</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, aspernatur!
       </div>
     </section>
   )
