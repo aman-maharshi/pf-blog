@@ -4,7 +4,7 @@ import authorImage from '@/public/images/dp.jpeg'
 const navigation = [
   {
     name: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/in/amanmaharshi/',
     icon: (props: any) => (
       <svg fill='currentColor' viewBox='0 0 448 512' {...props}>
         <path
@@ -16,7 +16,7 @@ const navigation = [
   },
   {
     name: 'GitHub',
-    href: '#',
+    href: 'https://github.com/aman-maharshi',
     icon: (props: any) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -32,7 +32,7 @@ const navigation = [
 const Intro = () => {
   return (
     <section className='flex flex-col-reverse md:flex-row items-start md:items-center gap-x-10 gap-y-4 pb-24 md:pt-4'>
-      <div className='mt-2 flex-1 md:mt-0 flex gap-20 max-w-[700px]'>
+      <div className='mt-2 flex-1 md:mt-0 flex md:gap-20'>
         <div className='hidden md:flex flex-col gap-4 justify-center'>
           {navigation.map(item => (
             <a
@@ -47,7 +47,7 @@ const Intro = () => {
             </a>
           ))}
         </div>
-        <div className='max-w-[600px]'>
+        <div className='max-w-[700px]'>
           {/* <h1 className='text-4xl font-bold font-serif'>Aman Maharshi</h1> */}
           <h1 className='title no-underline'>Hey, I&#39;m Aman.</h1>
           {/* <p className='mt-5 md:text-lg font-light'>
@@ -60,8 +60,8 @@ const Intro = () => {
             I&#39;m a software engineer based in Bangalore, India. <br />
             I&#39;m passionate about learning new technologies and sharing knowledge with others.
           </p> */}
-          <p className='mt-3 font-light text-muted-foreground'>
-            Welcome to my website. I'm a software developer and content creator based in Bengaluru, India. 
+          <p className='mt-3 font-light md:text-lg'>
+            Welcome to my website. I'm a software engineer and content creator based in Bengaluru, India. 
             Here, I share what I've been working on recently and things I've learned along the way.
           </p>
         </div>
