@@ -63,7 +63,53 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/*
+  NAV HOVER ANIMATION
+-----------------------*/
+
+.navItem {
+  position: relative;
+}
+
+.navItem,
+.navItem:after {
+  transition: all 0.3s;
+}
+
+.navItem:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  background: #95d5b2;
+  height: 2px;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  position: relative;
+}
+
+.navLinkActive:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  background: #95d5b2;
+  height: 2px;
 }

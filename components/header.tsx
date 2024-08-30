@@ -13,14 +13,14 @@ const Header = () => {
           </Link>
         </div>
 
-        <ul className='flex items-center gap-6 text-sm font-light text-muted-foreground sm:gap-10'>
-          <li className='transition-colors hover:text-foreground'>
+        <ul className='flex items-center gap-6 text-sm md:text-base sm:gap-10'>
+          <li className='navItem'>
             <Link href='/posts'>Posts</Link>
           </li>
-          <li className='transition-colors hover:text-foreground'>
+          <li className='navItem'>
             <Link href='/projects'>Projects</Link>
           </li>
-          <li className='transition-colors hover:text-foreground'>
+          <li className='navItem'>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>
