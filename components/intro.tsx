@@ -47,7 +47,7 @@ const Intro = () => {
             </a>
           ))}
         </div>
-        <div className='max-w-[700px]'>
+        <div className='max-w-[700px] md:text-lg'>
           {/* <h1 className='text-4xl font-bold font-serif'>Aman Maharshi</h1> */}
           <h1 className='title no-underline'>Hey, I&#39;m Aman.</h1>
           {/* <p className='mt-5 md:text-lg font-light'>
@@ -60,10 +60,26 @@ const Intro = () => {
             I&#39;m a software engineer based in Bangalore, India. <br />
             I&#39;m passionate about learning new technologies and sharing knowledge with others.
           </p> */}
-          <p className='mt-3 font-light md:text-lg'>
-            Welcome to my website. I'm a software engineer and content creator based in Bengaluru, India. 
+          <p className='mt-3'>
+            Welcome to my website. I'm a software engineer and content creator based in Bengaluru, India.
             Here, I share what I've been working on recently and things I've learned along the way.
           </p>
+
+          {/* <p className='mt-6'>Currently I'm working with the following technologies:</p>
+
+          <div className='grid grid-cols-2'>
+            <ul className='mt-3'>
+              <li>JavaScript / TypeScript</li>
+              <li>React</li>
+              <li>Next.js</li>
+            </ul>
+            <ul className='mt-3'>
+              <li>HTML / CSS / Sass</li>
+              <li>Tailwind / Material UI</li>
+              <li>Git</li>
+            </ul>
+          </div> */}
+
         </div>
       </div>
       <div className='relative w-full md:w-auto'>
@@ -85,8 +101,8 @@ const Intro = () => {
           className='flex-1 rounded-full block m-auto'
           src={authorImage}
           alt='Aman Maharshi'
-          width={225}
-          height={225}
+          width={200}
+          height={200}
           priority
         />
       </div>
