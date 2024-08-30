@@ -4,7 +4,7 @@ import React from 'react'
 const Home = () => {
   return (
     <section className="py-24">
-      <div className="container max-w-[1200px]">
+      <div className="container max-w-[1100px]">
         <Intro />
       </div>
     </section>

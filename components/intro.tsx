@@ -48,12 +48,21 @@ const Intro = () => {
           ))}
         </div>
         <div className='max-w-[600px]'>
-          <h1 className='text-4xl font-bold font-serif'>Aman Maharshi</h1>
-          <p className='mt-5 md:text-lg font-light'>
+          {/* <h1 className='text-4xl font-bold font-serif'>Aman Maharshi</h1> */}
+          <h1 className='title no-underline'>Hey, I&#39;m Aman.</h1>
+          {/* <p className='mt-5 md:text-lg font-light'>
             I'm a <span className='font-bold text-black dark:text-white'>frontend developer</span> with a strong passion for developing web and mobile applications.
             I enjoy crafting solutions that are not only high-performing and efficient but also intuitive and engaging for users.
             <br /><br />
             In addition to my development work, I love sharing my knowledge with others, helping to foster growth and collaboration within the tech community.
+          </p> */}
+          {/* <p className='mt-3 font-light text-muted-foreground'>
+            I&#39;m a software engineer based in Bangalore, India. <br />
+            I&#39;m passionate about learning new technologies and sharing knowledge with others.
+          </p> */}
+          <p className='mt-3 font-light text-muted-foreground'>
+            Welcome to my website. I'm a software developer and content creator based in Bengaluru, India. 
+            Here, I share what I've been working on recently and things I've learned along the way.
           </p>
         </div>
       </div>
@@ -76,38 +85,14 @@ const Intro = () => {
           className='flex-1 rounded-full block m-auto'
           src={authorImage}
           alt='Aman Maharshi'
-          width={250}
-          height={250}
+          width={225}
+          height={225}
           priority
         />
       </div>
     </section>
   )
 }
-
-// const Intro = () => {
-//   return (
-//     <section className='flex flex-col-reverse items-start gap-x-10 gap-y-4 pb-24 md:flex-row md:items-center'>
-//       <div className='mt-2 flex-1 md:mt-0'>
-//         <h1 className='title no-underline'>Hey, I&#39;m Aman.</h1>
-//         <p className='mt-3 font-light text-muted-foreground'>
-//           I&#39;m a software engineer based in Bangalore, India. <br />
-//           I&#39;m passionate about learning new technologies and sharing knowledge with others.
-//         </p>
-//       </div>
-//       <div className='relative'>
-//         <Image
-//           className='flex-1 rounded-lg grayscale'
-//           src={authorImage}
-//           alt='Aman Maharshi'
-//           width={175}
-//           height={175}
-//           priority
-//         />
-//       </div>
-//     </section>
-//   )
-// }
 
 export default Intro
 

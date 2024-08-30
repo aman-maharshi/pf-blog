@@ -80,7 +80,7 @@ const navigation = [
 const Footer = () => {
   return (
     <footer className='py-8'>
-      <div className='container max-w-[1200px]'>
+      <div className='container max-w-[1100px]'>
         <div className='md:flex md:items-center md:justify-between'>
           <div className='flex justify-center space-x-6 md:order-2'>
             {navigation.map(item => (
