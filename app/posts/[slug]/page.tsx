@@ -4,15 +4,14 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 
 const Post = async ({ params }: { params: { slug: string } }) => {
 
   const { slug } = params
   const post = await getPostBySlug(slug)
 
-  if (!post) {
-    return <div>Post not found</div>
-  }
+  if (!post) notFound()
 
   const { metadata, content } = post
   const { title, image, author, publishedAt } = metadata
