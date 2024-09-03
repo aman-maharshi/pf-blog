@@ -18,16 +18,16 @@ const Header = () => {
         </div>
 
         <ul className='flex items-center gap-6 text-sm md:text-base sm:gap-10'>
-          <li className={`navItem ${pathname === "/posts" ? 'navLinkActive' : ''}`}>
+          <li className={`navItem ${pathname?.includes('/posts') ? 'navLinkActive' : ''}`}>
             <Link href='/posts'>Posts</Link>
           </li>
-          <li className='navItem'>
+          <li className={`navItem ${pathname?.includes('/projects') ? 'navLinkActive' : ''}`}>
             <Link href='/projects'>Projects</Link>
           </li>
-          {/* <li className='navItem'>
+          {/* <li className={`navItem ${pathname?.includes('/music') ? 'navLinkActive' : ''}`}>
             <Link href='/music'>Music</Link>
           </li> */}
-          <li className='navItem'>
+          <li className={`navItem ${pathname?.includes('/contact') ? 'navLinkActive' : ''}`}>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>
