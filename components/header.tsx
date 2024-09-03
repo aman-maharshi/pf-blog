@@ -1,8 +1,12 @@
+'use client'
+
 import React from 'react'
 import ThemeToggle from './themeToggle'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
 
   return (
     <header className='fixed inset-x-0 top-0 z-50 py-6 backdrop-blur-sm border-b'>
@@ -14,7 +18,7 @@ const Header = () => {
         </div>
 
         <ul className='flex items-center gap-6 text-sm md:text-base sm:gap-10'>
-          <li className='navItem'>
+          <li className={`navItem ${pathname === "/posts" ? 'navLinkActive' : ''}`}>
             <Link href='/posts'>Posts</Link>
           </li>
           <li className='navItem'>
