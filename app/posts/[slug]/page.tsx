@@ -5,6 +5,7 @@ import Image from "next/image"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import MDXContent from "@/components/mdx-content"
 
 const Post = async ({ params }: { params: { slug: string } }) => {
 
@@ -46,7 +47,8 @@ const Post = async ({ params }: { params: { slug: string } }) => {
         </header>
 
         <main className='prose mt-16 dark:prose-invert'>
-          <MDXRemote source={content} />
+          {/* <MDXRemote source={content} /> */}
+          <MDXContent source={content} /> 
         </main>
 
         <footer className='mt-16'>
