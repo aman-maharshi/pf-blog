@@ -1,17 +1,18 @@
-import Link from 'next/link'
-import React from 'react'
+import { getPosts } from '@/lib/posts'
+import PostsWithSearch from '@/components/posts-with-search'
 
-const Posts = () => {
+const PostsPage = async () => {
+  const posts = await getPosts()
+
   return (
-    <section className="py-24">
-      <div className="container max-w-[1100px]">
-        <ul className='flex flex-col gap-2 text-lg font-bold underline mt-4'>
-          <li><Link href="/posts/introduction-to-mdx">Introduction to MDX</Link></li>
-          <li><Link href="/posts/introduction-to-nextjs">Introduction to NextJs</Link></li>
-        </ul>
+    <section className='pb-24 pt-40'>
+      <div className='container max-w-[1100px]'>
+        <h1 className='title mb-12'>Posts</h1>
+
+        <PostsWithSearch posts={posts} />
       </div>
     </section>
   )
 }
 
-export default Posts
+export default PostsPage
