@@ -10,12 +10,13 @@ import { Cross2Icon } from '@radix-ui/react-icons'
 
 export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
   const [query, setQuery] = useState('')
-  const filtered = posts.filter(post =>
+  const filteredPosts = posts.filter(post =>
     post.title?.toLowerCase().includes(query.toLowerCase())
   )
 
   const isFiltered = query.length > 0
-  function resetFilter() {
+
+  const resetFilter = () => {
     setQuery('')
   }
 
@@ -42,7 +43,7 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
         )}
       </div>
 
-      <Posts posts={filtered} />
+      <Posts posts={filteredPosts} />
     </div>
   )
 }
